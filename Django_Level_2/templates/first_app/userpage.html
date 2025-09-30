@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First App</title>
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+</head>
+<body>
+    <h1>Here are your User:</h1>
+    <div class="djangptwo">
+        {% if user_record %}
+    
+            {% for acc in user_record %}
+            <p>{{ acc.id }}.User Info</p>
+            <ul>
+                <li>First Name: {{ acc.First_Name }}</li>
+                <li>Last Name: {{ acc.Last_Name }}</li>
+                <li>Email: {{ acc.Email }}</li>
+            </ul>
+            {% endfor %}
+
+        {% else %}
+            <p>No User Found</p>
+        {% endif %}
+    </div>
+    
+
+</body>
+</html>
