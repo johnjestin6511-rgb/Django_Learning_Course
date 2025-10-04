@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html" %}
+    {% block body_block %}
+    <h1>Welcome to My Homepage!</h1>
+    <h1>Filter Method from HTML</h1>
+    <h2>{{ name|upper }}</h2>
+    <h2>{{ number|add:"50" }}</h2>
+    <h2>{{ name|cut:"World" }}</h2>
+    {% endblock %}
